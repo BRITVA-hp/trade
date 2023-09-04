@@ -1,0 +1,48 @@
+.main
+  padding-top: 205px
+  padding-bottom: 230px
+  background: url("../img/main/bg.png") no-repeat right bottom, url("../img/main/elem1.png") no-repeat left calc(100% + 356px), url("../img/main/elem2.png") no-repeat right top
+  position: relative
+  &__container
+    position: relative
+  &__card
+    border-radius: 5px
+    position: absolute
+    top: 100px
+    right: 580px
+    color: #fff
+    padding: 2px
+    overflow: hidden
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(to right, #FF0141, #3962FC, #8639FB)
+    &__content
+      padding: 30px
+      background: #12112A
+      backdrop-filter: blur(15px)
+      span
+        font-weight: 900
+  &__title
+    color: #12112A
+    font-size: 55px
+    font-style: normal
+    font-weight: 900
+    line-height: normal
+    max-width: 640px
+    margin-bottom: 25px
+    span
+      color: #8639FB
+  &__text
+    color: #12112A
+    font-size: 35px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    margin-bottom: 50px
+  &__button
+    width: 375px

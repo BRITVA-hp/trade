@@ -1,0 +1,23 @@
+.quiz
+  &__title
+    max-width: 770px
+    margin-bottom: 65px
+  &__box
+    border-radius: 5px
+    background: rgba(56, 55, 90, 0.50)
+    overflow: hidden
+    position: relative
+    padding: 2px
+    &::before
+      content: ''
+      position: absolute
+      z-index: 1
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background: linear-gradient(to right, #CE1660, #8538F9)
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 2px, 2px 2px, 2px calc(100% - 2px), calc(100% - 2px) calc(100% - 2px), calc(100% - 2px) 2px, 0 2px)
+  &__content
+    position: relative
+    z-index: 2
