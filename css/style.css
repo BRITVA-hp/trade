@@ -379,6 +379,8 @@ body {
   background: transparent;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: underline;
+  text-align: left;
+  width: auto !important;
 }
 .button--back::before, .button--back::after {
   display: none;
@@ -654,6 +656,30 @@ body {
   font-weight: 900;
 }
 
+.quiz {
+  background: url("../img/quiz/bg.png") no-repeat right center;
+  padding-bottom: 120px;
+  position: relative;
+}
+.quiz__input-group {
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 395px;
+}
+.quiz__input-group:last-child {
+  margin-bottom: 0;
+}
+.quiz__img {
+  display: none;
+  position: absolute;
+  right: -20px;
+  bottom: -40px;
+  z-index: 1;
+}
+.quiz__container {
+  position: relative;
+  z-index: 1;
+}
 .quiz__title {
   max-width: 770px;
   margin-bottom: 65px;
@@ -664,6 +690,7 @@ body {
   overflow: hidden;
   position: relative;
   padding: 2px;
+  max-width: 770px;
 }
 .quiz__box::before {
   content: "";
@@ -680,6 +707,70 @@ body {
 .quiz__content {
   position: relative;
   z-index: 2;
+  border-radius: 5px;
+  padding: 55px 112px;
+}
+.quiz__question {
+  color: #FFF;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.quiz__block {
+  margin-bottom: 50px;
+}
+.quiz__radio {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  position: relative;
+  gap: 15px;
+  cursor: pointer;
+}
+.quiz__radio__text {
+  line-height: 20px;
+}
+.quiz__radio:last-child {
+  margin-bottom: 0;
+}
+.quiz__radio__ok {
+  display: block;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #3962FC;
+  border-radius: 50%;
+  position: relative;
+}
+.quiz__radio__ok::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #3962FC;
+  border-radius: 50%;
+  display: none;
+}
+.quiz__radio__input {
+  display: none;
+}
+.quiz__radio__input:checked + .quiz__radio__ok::before {
+  display: block;
+}
+.quiz__button-group {
+  display: flex;
+  justify-content: space-between;
+}
+.quiz__button-group--last {
+  max-width: 395px;
+}
+.quiz__button {
+  width: 260px;
 }
 
 .union {
@@ -688,6 +779,193 @@ body {
 }
 .union--we {
   background: url("../img/we/elem1.png") no-repeat right -100px, url("../img/we/elem2.png") no-repeat -100px calc(100% + 100px), #12112A;
+}
+
+.teacher {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/teacher/elem1.png") no-repeat right -500px, url("../img/teacher/elem2.png") no-repeat left calc(100% + 100px);
+}
+.teacher__title {
+  text-align: center;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 15px;
+}
+.teacher__subtitle {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 65px;
+  text-align: center;
+}
+.teacher__items {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 920px;
+  margin: 0 auto 50px;
+}
+.teacher__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  max-width: 250px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.teacher__text {
+  text-align: center;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 1050px;
+  margin: 0 auto 50px;
+}
+.teacher__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 0;
+}
+.teacher__card {
+  width: calc(33% - 13px);
+  border-radius: 5px;
+  background: #12112A;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  padding: 0 5px;
+  color: #fff;
+}
+.teacher__card__photo {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.teacher__card__wrap {
+  padding-bottom: 10px;
+}
+.teacher__card__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px 0;
+}
+.teacher__card__img {
+  width: calc(50% - 5px);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teacher__card__button {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  border-radius: 5px;
+  background: #8639FB;
+  padding: 19px 0;
+  border: none;
+  display: block;
+  margin: 0 auto 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+  max-width: 375px;
+}
+.teacher__card__button:hover {
+  background: #995dfd;
+}
+.teacher__card__box {
+  padding: 40px 15px 0;
+  min-height: 570px;
+  margin-bottom: 20px;
+}
+.teacher__card__header {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 20px;
+}
+.teacher__card__name {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+.teacher__card__description {
+  margin-bottom: 30px;
+}
+.teacher__card__text-group {
+  margin-bottom: 20px;
+}
+.teacher__card__text-group span {
+  color: #FF0141;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.training {
+  background: url("../img/training/elem.png") no-repeat right center, #12112A;
+  padding-top: 100px;
+  color: #fff;
+}
+.training__title {
+  margin-bottom: 15px;
+}
+.training__subtitle {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 65px;
+}
+.training__subtitle span {
+  color: #FF0141;
+  font-weight: 900;
+}
+.training__row {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.training__button {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+}
+.training__card {
+  text-align: center;
+}
+.training__card img {
+  margin-bottom: 30px;
+}
+.training__card__title {
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.training__card__text {
+  max-width: 245px;
+  margin: auto;
 }
 
 .modal {
@@ -722,6 +1000,9 @@ body {
 }
 
 @media screen and (max-width: 1600px) {
+  .quiz {
+    background: url("../img/quiz/bg.png") no-repeat right center/700px;
+  }
   .main {
     background: url("../img/main/bg.png") no-repeat calc(100% + 100px) bottom/750px, url("../img/main/elem1.png") no-repeat left calc(100% + 356px), url("../img/main/elem2.png") no-repeat right top;
     padding-top: 180px;
@@ -738,8 +1019,122 @@ body {
   .container {
     max-width: 1200px;
   }
+  .training {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .training__button {
+    font-size: 18px;
+    padding: 17px 0;
+  }
+  .training__row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .training__subtitle {
+    margin-bottom: 55px;
+    font-size: 25px;
+    text-align: center;
+  }
+  .training__title {
+    text-align: center;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  .training__card {
+    font-size: 18px;
+  }
+  .training__card img {
+    width: 85px;
+    margin-bottom: 20px;
+  }
+  .teacher {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url("../img/teacher/elem1.png") no-repeat right -500px/500px, url("../img/teacher/elem2.png") no-repeat left calc(100% + 300px)/600px;
+  }
+  .teacher__card {
+    width: calc(33% - 5px);
+  }
+  .teacher__card__button {
+    max-width: 250px;
+    font-size: 18px;
+    padding: 17px 0;
+  }
+  .teacher__card__text-group {
+    font-size: 18px;
+  }
+  .teacher__card__text-group span {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .teacher__card__box {
+    padding-top: 30px;
+  }
+  .teacher__card__photo {
+    width: 100px;
+  }
+  .teacher__card__header {
+    gap: 15px;
+  }
+  .teacher__card__name {
+    font-size: 25px;
+  }
+  .teacher__card__description {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .teacher__title {
+    margin-bottom: 15px;
+  }
+  .teacher__subtitle {
+    font-size: 25px;
+    margin-bottom: 40px;
+  }
+  .teacher__items {
+    max-width: 832px;
+    margin-bottom: 40px;
+  }
+  .teacher__text {
+    font-size: 25px;
+    max-width: 830px;
+  }
+  .teacher__item {
+    font-size: 18px;
+    gap: 10px;
+  }
+  .teacher__item img {
+    width: 70px;
+  }
+  .quiz {
+    background: none;
+    padding-bottom: 280px;
+  }
+  .quiz__input-group {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .quiz__img {
+    display: block;
+  }
+  .quiz__title {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    display: block;
+    text-align: center;
+  }
+  .quiz__box {
+    margin: auto;
+  }
+  .quiz__question {
+    text-align: center;
+  }
+  .quiz__button-group--last {
+    margin: auto;
+  }
   .we {
     padding-top: 100px;
+    margin-bottom: 100px;
   }
   .we__title {
     margin-bottom: 50px;
@@ -813,8 +1208,128 @@ body {
   .section__title {
     font-size: 28px;
   }
+  .training {
+    padding-top: 70px;
+  }
+  .training__button {
+    max-width: 335px;
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  .training__row {
+    margin-bottom: 40px;
+  }
+  .training__subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .training__card {
+    font-size: 16px;
+  }
+  .training__card img {
+    width: 76px;
+    margin-bottom: 15px;
+  }
+  .teacher {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+  .teacher__row {
+    justify-content: center;
+    gap: 10px;
+  }
+  .teacher__card {
+    width: calc(50% - 5px);
+  }
+  .teacher__card__button {
+    font-size: 16px;
+    padding: 15px 0;
+    margin-bottom: 25px;
+  }
+  .teacher__card__box {
+    min-height: 0;
+    margin-bottom: 30px;
+  }
+  .teacher__card__text-group {
+    font-size: 16px;
+  }
+  .teacher__card__text-group span {
+    font-size: 20px;
+  }
+  .teacher__card__description {
+    font-size: 16px;
+  }
+  .teacher__card__photo {
+    width: 80px;
+  }
+  .teacher__card__header {
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  .teacher__card__name {
+    font-size: 20px;
+  }
+  .teacher__text {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 630px;
+  }
+  .teacher__subtitle {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+  .teacher__items {
+    max-width: 600px;
+    margin-bottom: 35px;
+  }
+  .teacher__item {
+    font-size: 16px;
+  }
+  .teacher__item img {
+    width: 60px;
+  }
+  .quiz {
+    padding-bottom: 236px;
+  }
+  .quiz__input {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+  .quiz__block {
+    margin-bottom: 25px;
+  }
+  .quiz__input-group {
+    margin-bottom: 10px;
+  }
+  .quiz__button-group {
+    gap: 20px;
+  }
+  .quiz__button {
+    width: 100%;
+    max-width: 260px;
+  }
+  .quiz__title {
+    margin-bottom: 30px;
+  }
+  .quiz__box {
+    max-width: 400px;
+  }
+  .quiz__content {
+    padding: 30px 20px;
+  }
+  .quiz__question {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .quiz__radio {
+    margin-bottom: 15px;
+  }
+  .quiz__radio__text {
+    font-size: 16px;
+  }
   .we {
     padding-top: 80px;
+    margin-bottom: 80px;
   }
   .we__title {
     margin-bottom: 30px;
@@ -884,6 +1399,18 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .teacher__title {
+    width: -moz-min-content;
+    width: min-content;
+  }
+  .teacher__items {
+    flex-direction: column;
+    align-items: center;
+  }
+  .teacher__card {
+    width: 100%;
+    max-width: 400px;
+  }
   .we__title {
     text-align: center;
     margin-left: auto;
@@ -931,6 +1458,9 @@ body {
   }
 }
 @media screen and (max-width: 575px) {
+  .quiz__content {
+    padding: 30px 10px;
+  }
   .advantages {
     padding-top: 0;
     padding-bottom: 0;
