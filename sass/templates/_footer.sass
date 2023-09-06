@@ -1,1 +1,35 @@
-//.footer
+.footer
+  padding: 50px 20px
+  &__row
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+  &__logo
+    margin-bottom: 20px
+  &__text
+    font-size: 16px
+    &--upper
+      text-transform: uppercase
+  &__box
+    &--3
+      text-align: right
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-end
+  &__phone, &__email
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 10px
+    text-align: center
+    position: relative
+    a
+      text-decoration: none
+      font-weight: 900
+      color: transparent
+      background: linear-gradient(to right, #CE1660, #8538F9)
+      background-clip: text
+  &__phone
+    margin-bottom: 10px

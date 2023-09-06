@@ -1,0 +1,63 @@
+.records
+  margin-bottom: 120px
+  &__title
+    margin-bottom: 15px
+  &__text
+    font-size: 35px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    margin-bottom: 65px
+  &__row
+    display: flex
+    justify-content: space-between
+  &__card
+    width: calc(33% - 13px)
+    border-radius: 5px
+    background: #12112A
+    backdrop-filter: blur(15px)
+    color: #fff
+    position: relative
+    overflow: hidden
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: 0
+      width: 100%
+      height: 5px
+      background: linear-gradient(to right, #FF0141, #3962FC, #8639FB)
+    &__title
+      font-size: 35px
+      font-style: normal
+      font-weight: 900
+      line-height: normal
+      padding: 25px 20px 20px
+      text-align: center
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 3px
+        background: linear-gradient(to right, #FF0141, #3962FC, #8639FB)
+    &__item
+      display: flex
+      justify-content: center
+      gap: 35px
+      padding: 20px
+      position: relative
+      &:last-child
+        padding-bottom: 40px
+        &::after
+          display: none
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 3px
+        background: #393944
