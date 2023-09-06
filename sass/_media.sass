@@ -17,6 +17,30 @@
   .container
     max-width: 1200px
 
+  .result
+    padding-top: 100px
+    padding-bottom: 70px
+    &__title
+      display: block
+      margin: 0 auto 50px
+      text-align: center
+    &__button
+      font-size: 18px
+      padding: 17px 0
+    &__row
+      grid-template: 1fr 1fr 1.3fr / 1fr 1fr
+    &__card
+      padding: 30px 20px 20px 40px
+      &--big
+        grid-column: 1 / 3
+        grid-row: 3
+      &__content
+        padding: 40px
+      &__text
+        font-size: 18px
+      &__title
+        font-size: 18px
+
   .training
     padding-top: 60px
     padding-bottom: 0
@@ -163,6 +187,29 @@
   .section
     &__title
       font-size: 28px
+
+  .result
+    padding-top: 80px
+    padding-bottom: 34px
+    &__title
+      margin-bottom: 40px
+    &__row
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      margin-bottom: 40px
+    &__button
+      font-size: 16px
+      padding: 16px 0
+      max-width: 335px
+      width: 100%
+    &__card
+      padding: 30px
+      width: calc(50% - 10px)
+      &__text
+        font-size: 16px
+      &__content
+        padding: 25px
 
   .training
     padding-top: 70px
@@ -315,6 +362,13 @@
       text-align: left
 
 @media screen and ( max-width: 767px )
+  .result
+    &__row
+      flex-direction: column
+      align-items: center
+    &__card
+      width: 100%
+
   .teacher
     &__title
       width: min-content
@@ -365,6 +419,11 @@
       max-width: 335px
 
 @media screen and ( max-width: 575px )
+  .result
+    &__card
+      &__content
+        padding: 35px 10px
+
   .quiz
     &__content
       padding: 30px 10px
